@@ -3,10 +3,6 @@ import checkout from './checkout';
 
 const pricingRules = {};
 
-// co1.scan('VOUCHER').scan('VOUCHER').scan('TSHIRT');
-
-// const price = co1.total();
-
 test('test checkout factory', (assert) => {
   const co1 = checkout(pricingRules);
 

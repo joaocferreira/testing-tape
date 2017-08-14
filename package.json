@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tape ./bundle.js | faucet",
+    "test": "npm run webpack && npm run test:1",
+    "test:1": "tape ./bundle.js | faucet || true",
     "eslint": "./node_modules/.bin/eslint ./",
-    "run": "webpack && npm test"
+    "webpack": "webpack --config webpack.config.js"
   },
   "author": "joaocferreira",
   "license": "ISC",
