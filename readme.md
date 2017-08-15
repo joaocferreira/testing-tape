@@ -17,8 +17,8 @@ git pull https://github.com/joaocferreira/testing-tape.git
 #### Testing with docker 
 
 ```
-docker build -t test ./
-docker run -d test
+docker build -t <name> ./
+docker run -d <name>
 docker ps -a
 docker logs <container-id>
 ```
