@@ -29,8 +29,8 @@ function checkout(pricingRules = {}) {
     },
     total() {
       Object
-        .keys(checkoutRules)
-        .map(key => checkoutRules[key](cart));
+        .values(checkoutRules)
+        .map(f => f(cart));
 
       const price = Object.keys(cart)
         .map(key => cart[key] * rules[key])

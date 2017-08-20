@@ -18,9 +18,13 @@ git pull https://github.com/joaocferreira/testing-tape.git
 
 ```
 docker build -t <name> ./
-docker run -d <name>
-docker ps -a
-docker logs <container-id>
+docker run <name>
+```
+
+    or
+
+```
+docker-compose up  --build
 ```
 
 #### Testing with node 

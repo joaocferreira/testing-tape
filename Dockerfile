@@ -1,11 +1,13 @@
 FROM node:latest
 
-# Install app dependencies
-COPY package.json package-lock.json ./
+COPY package.json package-lock.json ./tmp/
 
-RUN npm install
+RUN cd /tmp && npm install
 
-# Bundle app source
+RUN mkdir -p /app && cp -a /tmp/node_modules /app/
+
+WORKDIR /app
+
 COPY . .
 
 CMD [ "npm", "test" ]
