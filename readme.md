@@ -21,7 +21,7 @@ docker build -t <name> ./
 docker run <name>
 ```
 
-    or
+or
 
 ```
 docker-compose up  --build
